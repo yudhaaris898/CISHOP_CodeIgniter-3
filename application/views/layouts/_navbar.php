@@ -6,7 +6,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <?php if(!$this->session->userdata('is_login') || $this->session->userdata('role') === 'member' ) : ?>
             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="<?= base_url('') ?>">Home</a>
+            </li>
+              <?php elseif ($this->session->userdata('role') === 'admin'): ?>
+              <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="<?= base_url('') ?>">Home</a>
             </li>
             <li class="nav-item dropdown">
@@ -18,6 +23,7 @@
                 <a href="<?= base_url('user') ?>" class="dropdown-item">Pengguna</a>
               </div>
             </li>
+            <?php endif ?>
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
