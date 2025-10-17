@@ -19,22 +19,30 @@
                     <?= form_error('email') ?>
                 </div>
                 <div class="mb-3">
-                    <label for="">Password</label>
-                    <?= form_password('password', '', ['class' => 'form-control', 'placeholder' => 'Masukkan password minimal 8 karakter','required' => true]) ?>
+                    <label for="pass">Password</label>
+                    <?= form_password('password', '', ['class' => 'form-control', 'id' => 'pass', 'placeholder' => 'Masukkan password minimal 8 karakter','required' => true]) ?>
+                    <?= form_checkbox(['class' => 'form-check-input', 'onclick' => "togglePassword('pass')", 'id' => 'Password']) ?> <label for="Password">Show Password</label>
                     <?= form_error('password') ?>
                 </div>
                 <div class="mb-3">
-                    <label for="">Konfirmasi Password</label>
-                    <?= form_password('password_confirmation','',['class' => 'form-control', 'placeholder' => 'Masukkan password yang sama', 'required' =>true]) ?>
+                    <label for="Confirm_pass">Konfirmasi Password</label>
+                    <?= form_password('password_confirmation','',['class' => 'form-control', 'id' => 'Confirm_pass', 'placeholder' => 'Masukkan password yang sama', 'required' =>true]) ?>
+                    <?= form_checkbox(['class' => 'form-check-input', 'onclick' => "togglePassword('Confirm_pass')", 'id' => 'ConfirmPassword']) ?> <label for="ConfirmPassword">Show Password</label>
                     <?= form_error('password_confirmation') ?>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                   <button type="submit" class="btn btn-primary">Register</button>
-                  <button type="reset" class="btn btn-secondary">Cancel</button>
                 </div>
                <?= form_close() ?>
             </div>
             </div>
         </div>
-        </div>
-    </main>
+    </div>
+    <script>
+        function togglePassword(id) 
+        {
+            const input = document.getElementById(id);
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+    </script>
+</main>
