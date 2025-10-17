@@ -42,3 +42,10 @@ function string_to_slug (str) {
 
     return str;
 }
+
+window.togglePassword = function(id) {
+    const input = document.getElementById(id);
+    if (input) {
+        input.type = input.type === 'password' ? 'text' : 'password';
+    }
+};
