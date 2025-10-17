@@ -20,7 +20,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Password</label>
-                    <?= form_password('password', '', ['class' => 'form-control', 'placeholder' => 'Masukkan password minimal 8 karakter']) ?>
+                    <?= form_password('password', '', ['class' => 'form-control', 'id' => 'pass', 'placeholder' => 'Masukkan password minimal 8 karakter']) ?>
+                    <?= form_checkbox(['class' => 'form-check-input', 'onclick' => "togglePassword('pass')", 'id' => 'showPassword']) ?> <label for="showPassword">Show Password</label>
                     <?= form_error('password') ?>
                 </div>
                 <div class="mb-3">
@@ -64,6 +65,13 @@
                <?= form_close() ?>
             </div>
             </div>
-          </div>
-      </div>
-    </main>
+        </div>
+    </div>
+    <script>
+          function togglePassword(id) 
+        {
+            const input = document.getElementById(id);
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+      </script>
+</main>
