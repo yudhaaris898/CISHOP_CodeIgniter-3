@@ -16,13 +16,13 @@
                 <div class="mb-3">
                     <label for="">Deskripsi</label>
                     <?= 
-                    form_textarea(['name' => 'description', 'value' => $input->description, 'rows' => 4, 'class' => 'form-control'])
+                    form_textarea(['name' => 'description', 'value' => $input->description, 'rows' => 4, 'placeholder'=>'Silahkan masukkan deskripsi produk','class' => 'form-control'])
                      ?>
                      <?= form_error('description') ?>
                 </div>
                 <div class="mb-3">
                     <label for="">Harga</label>
-                    <?= form_input(['type' => 'number', 'name' => 'price', 'value' => $input->price, 'class' => 'form-control', 'required' => true]) ?>
+                    <?= form_input(['type' => 'number', 'name' => 'price', 'value' => $input->price, 'placeholder'=>'0', 'class' => 'form-control', 'required' => true]) ?>
                     <?= form_error('price') ?>
 
                 </div>

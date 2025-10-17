@@ -5,7 +5,7 @@
             <div class="card">
             <div class="card-header">
                 <span>Product</span>
-                <a href="<?= base_url('product/create') ?>" class="btn btn-sm btn-secondary">Tambah</a>
+                <a href="<?= base_url('product/create') ?>" class="btn btn-sm btn-primary">Tambah</a>
                 <div class="float-end">
                     <form action="<?= base_url("product/search") ?>" method="POST">
                         <div class="input-group">
