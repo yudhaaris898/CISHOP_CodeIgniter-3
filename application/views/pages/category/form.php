@@ -32,8 +32,7 @@
                     <?= form_error('slug') ?>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button type="submit" class="btn btn-primary">Simpan</button>
-                  <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
                <?= form_close() ?>
             </div>

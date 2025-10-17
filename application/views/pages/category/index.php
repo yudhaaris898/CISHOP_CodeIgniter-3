@@ -5,7 +5,7 @@
             <div class="card">
             <div class="card-header">
                 <span>Kategori</span>
-                <a href="<?= base_url('category/create') ?>" class="btn btn-sm btn-secondary">Tambah</a>
+                <a href="<?= base_url('category/create') ?>" class="btn btn-sm btn-primary">Tambah</a>
                 <div class="float-end">
                     <?= form_open(base_url('category/search'), ['method' => 'POST']) ?>
                         <div class="input-group">
